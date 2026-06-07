@@ -1,173 +1,158 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="uk">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Plan · Halyna Zakharenko</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #F7F5F0; --surface: #FFFFFF; --surface2: #F0EDE6;
+    --accent: #1A1A1A; --accent2: #6B5CE7; --teal: #00897B;
+    --coral: #E64A35; --amber: #D4860A; --blue: #1565C0; --pink: #C2185B;
+    --text-primary: #1A1A1A; --text-secondary: #5A5A5A; --text-muted: #9A9A9A;
+    --border: rgba(26,26,26,0.1); --border-strong: rgba(26,26,26,0.2);
+    --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+    --radius: 16px; --radius-sm: 8px;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-primary); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+  .page { max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }
+  .hero { margin-bottom: 64px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); background: rgba(107,92,231,0.08); border: 1px solid rgba(107,92,231,0.2); padding: 5px 14px; border-radius: 40px; margin-bottom: 20px; }
+  .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
+  .hero-name { font-family: var(--font-display); font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 8px; }
+  .hero-name span { color: var(--accent2); }
+  .hero-role { font-size: 16px; color: var(--text-secondary); margin-bottom: 28px; font-weight: 300; }
+  .hero-arrow { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 10px 20px; border-radius: 40px; }
+  .hero-arrow svg { width: 16px; height: 16px; }
+  .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 64px; }
+  @media (max-width: 600px) { .metrics { grid-template-columns: repeat(3, 1fr); } }
+  .metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 14px; text-align: center; }
+  .metric-val { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
+  .metric-label { font-size: 11px; color: var(--text-muted); line-height: 1.3; }
+  .section { margin-bottom: 56px; }
+  .section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .initiative { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 12px; position: relative; overflow: hidden; }
+  .initiative::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 4px 0 0 4px; }
+  .init-teal::before { background: var(--teal); }
+  .init-purple::before { background: var(--accent2); }
+  .init-coral::before { background: var(--coral); }
+  .init-amber::before { background: var(--amber); }
+  .init-blue::before { background: var(--blue); }
+  .init-pink::before { background: var(--pink); }
+  .init-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+  .init-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+  .init-tool { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 300; }
+  .init-body { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+  .init-body p + p { margin-top: 10px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 11px; font-weight: 500; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-strong); color: var(--text-secondary); background: var(--bg); }
+  .ace-box { background: #F0FAF6; border: 1px solid rgba(0,137,123,0.25); border-radius: var(--radius); padding: 28px; }
+  .ace-icon { width: 40px; height: 40px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .ace-icon svg { width: 22px; height: 22px; fill: #fff; }
+  .ace-coins { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.04em; margin-bottom: 10px; }
+  .ace-quote { font-size: 15px; color: var(--text-primary); line-height: 1.8; font-style: italic; margin-bottom: 14px; border-left: 3px solid var(--teal); padding-left: 16px; }
+  .ace-meta { font-size: 12px; color: var(--text-muted); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+  .why-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+  .why-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .why-card-title .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .why-item { font-size: 13px; color: var(--text-secondary); line-height: 1.65; padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
+  .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .why-item::before { content: '—'; color: var(--text-muted); flex-shrink: 0; margin-top: 1px; }
+  .footer { margin-top: 64px; text-align: center; font-size: 12px; color: var(--text-muted); font-weight: 300; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero { animation: fadeUp 0.6s ease both; }
+  .metrics { animation: fadeUp 0.6s 0.1s ease both; }
+  .section:nth-child(3) { animation: fadeUp 0.6s 0.15s ease both; }
+  .section:nth-child(4) { animation: fadeUp 0.6s 0.2s ease both; }
+  .section:nth-child(5) { animation: fadeUp 0.6s 0.25s ease both; }
+  .section:nth-child(6) { animation: fadeUp 0.6s 0.3s ease both; }
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="uk"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Growth Plan · Halyna Zakharenko&lt;/title&gt;</p>
-<p class="p1">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1">&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--bg: #F7F5F0; --surface: #FFFFFF; --surface2: #F0EDE6;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--accent: #1A1A1A; --accent2: #6B5CE7; --teal: #00897B;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--coral: #E64A35; --amber: #D4860A; --blue: #1565C0; --pink: #C2185B;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--text-primary: #1A1A1A; --text-secondary: #5A5A5A; --text-muted: #9A9A9A;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--border: rgba(26,26,26,0.1); --border-strong: rgba(26,26,26,0.2);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>--radius: 16px; --radius-sm: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>html { scroll-behavior: smooth; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body { background: var(--bg); color: var(--text-primary); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.page { max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero { margin-bottom: 64px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); background: rgba(107,92,231,0.08); border: 1px solid rgba(107,92,231,0.2); padding: 5px 14px; border-radius: 40px; margin-bottom: 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-name { font-family: var(--font-display); font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-name span { color: var(--accent2); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-role { font-size: 16px; color: var(--text-secondary); margin-bottom: 28px; font-weight: 300; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-arrow { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 10px 20px; border-radius: 40px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero-arrow svg { width: 16px; height: 16px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 64px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 600px) { .metrics { grid-template-columns: repeat(3, 1fr); } }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 14px; text-align: center; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.metric-val { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.metric-label { font-size: 11px; color: var(--text-muted); line-height: 1.3; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section { margin-bottom: 56px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.initiative { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 12px; position: relative; overflow: hidden; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.initiative::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 4px 0 0 4px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-teal::before { background: var(--teal); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-purple::before { background: var(--accent2); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-coral::before { background: var(--coral); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-amber::before { background: var(--amber); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-blue::before { background: var(--blue); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-pink::before { background: var(--pink); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 14px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); line-height: 1.3; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-tool { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 300; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-body { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.init-body p + p { margin-top: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tags { display: flex; flex-wrap: wrap; gap: 6px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tag { font-size: 11px; font-weight: 500; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-strong); color: var(--text-secondary); background: var(--bg); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-box { background: #F0FAF6; border: 1px solid rgba(0,137,123,0.25); border-radius: var(--radius); padding: 28px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-icon { width: 40px; height: 40px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-icon svg { width: 22px; height: 22px; fill: #fff; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-coins { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.04em; margin-bottom: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-quote { font-size: 15px; color: var(--text-primary); line-height: 1.8; font-style: italic; margin-bottom: 14px; border-left: 3px solid var(--teal); padding-left: 16px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ace-meta { font-size: 12px; color: var(--text-muted); }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-card-title .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-item { font-size: 13px; color: var(--text-secondary); line-height: 1.65; padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-item:last-child { border-bottom: none; padding-bottom: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.why-item::before { content: '—'; color: var(--text-muted); flex-shrink: 0; margin-top: 1px; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.footer { margin-top: 64px; text-align: center; font-size: 12px; color: var(--text-muted); font-weight: 300; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero { animation: fadeUp 0.6s ease both; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.metrics { animation: fadeUp 0.6s 0.1s ease both; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section:nth-child(3) { animation: fadeUp 0.6s 0.15s ease both; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section:nth-child(4) { animation: fadeUp 0.6s 0.2s ease both; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section:nth-child(5) { animation: fadeUp 0.6s 0.25s ease both; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.section:nth-child(6) { animation: fadeUp 0.6s 0.3s ease both; }</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1">&lt;div class="page"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-tag"&gt;Growth Plan · 2025&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="hero-name"&gt;Halyna&lt;br&gt;&lt;span&gt;Zakharenko&lt;/span&gt;&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="hero-role"&gt;Creative Marketing Designer · 6 місяців 19 днів&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-arrow"&gt;Junior → Mid &lt;svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"&gt;&lt;path d="M3 8h10M9 4l4 4-4 4"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="metrics"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;&lt;div class="metric-val"&gt;5–6&lt;/div&gt;&lt;div class="metric-label"&gt;відео щодня&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;&lt;div class="metric-val"&gt;6+&lt;/div&gt;&lt;div class="metric-label"&gt;промт-систем створено&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;&lt;div class="metric-val"&gt;2&lt;/div&gt;&lt;div class="metric-label"&gt;борди у Figma&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;&lt;div class="metric-val"&gt;2+&lt;/div&gt;&lt;div class="metric-label"&gt;команди охоплено&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;&lt;div class="metric-val"&gt;10&lt;/div&gt;&lt;div class="metric-label"&gt;ACE coins отримано&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-label"&gt;Ініціативи та вплив — детально&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-teal"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Veo3 · Усунення небажаних звуків при генерації&lt;/div&gt;&lt;div class="init-tool"&gt;Інструмент: Veo3 · Платформа: Figma&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;Під час роботи з генерацією відео виявила системну проблему: модель Veo3 додавала небажані смішки та угукання до AI UGC персонажів, що знижувало якість фінального контенту. Самостійно розробила промт, який усунув цей баг на рівні генерації.&lt;/p&gt;&lt;p&gt;Не зупинилася на особистому рішенні — масштабувала результат: створила борду у Figma з розгалуженою системою промтів. Борда покрила різні сетінги: конференції, подкасти, лекції, діалоги двох людей у кадрі, питання з залу. Всі промти у загальному доступі для команди моушен-дизайнерів.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Самостійне дослідження&lt;/span&gt;&lt;span class="tag"&gt;Масштабування рішення&lt;/span&gt;&lt;span class="tag"&gt;База знань команди&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-purple"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Veo3 · Консистентний голос персонажів впродовж відео&lt;/div&gt;&lt;div class="init-tool"&gt;Інструмент: Veo3 · Дослідження: PQ Score Improvement&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;Після аналізу дослідження PQ Score Improvement виникла нова задача: AI UGC персонажі втрачали консистентність голосу між сценами. Провела глибоке дослідження метрик, тестувала на реальних персонажах — вивела ідеальну формулу промта.&lt;/p&gt;&lt;p&gt;Об'єднала новий промт із промтом для прибирання смішків → отримала єдиний універсальний промт для консистентних сцен із якісним звуком і стабільним голосом персонажа.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Аналіз метрик&lt;/span&gt;&lt;span class="tag"&gt;Тестування гіпотез&lt;/span&gt;&lt;span class="tag"&gt;Інтеграція рішень&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-coral"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Kling 3 · Онбординг нового інструменту для всієї команди&lt;/div&gt;&lt;div class="init-tool"&gt;Інструмент: Kling 3 · Формат: Figma борда + Loom туторіал&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;Адаптувала існуючі промти під специфіку моделі, провела власне дослідження сильних і слабких сторін генерації (наприклад, Kling погано відтворює інтерфейс Facetime). Розмістила всі промти у загальний доступ на борду у Figma.&lt;/p&gt;&lt;p&gt;Додатково: розробила міні-гайд по роботі з Kling елементами та мультішотом. Записала Loom-туторіал для CM і нових дизайнерів: як через ChatGPT створювати нові промти на базі існуючих.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Дослідження нових інструментів&lt;/span&gt;&lt;span class="tag"&gt;Документація&lt;/span&gt;&lt;span class="tag"&gt;Навчання команди&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-amber"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Kling 3 + ChatGPT · Lo-fi хук та реалістичні lo-fi відео&lt;/div&gt;&lt;div class="init-tool"&gt;Інструменти: Kling 3, ChatGPT · Якість: 144p equivalent&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;Провела дослідження та тестування в Kling 3 з ціллю симулювати "144p equivalent" якість відео для Lo-fi хуку. Знайшла робочий підхід і додала промти до Figma.&lt;/p&gt;&lt;p&gt;Виявила комбо: фото поганої якості з GPT + Lo-fi промт у Kling → реалістичні lo-fi відео. Багато дизайнерів одразу почали використовувати і створювали влучні кадри.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Крос-інструментна інтеграція&lt;/span&gt;&lt;span class="tag"&gt;Ітеративне тестування&lt;/span&gt;&lt;span class="tag"&gt;Практичний результат&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-blue"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Онбординг нового члена команди · Buddy-роль&lt;/div&gt;&lt;div class="init-tool"&gt;Роль: Buddy · Охоплення: процеси, інструменти, комунікація&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;За власною ініціативою взяла роль Buddy для нового дизайнера. Провела повноцінний онбординг: промти, генерація, робочі методи та лайфхаки, CREO BUILDER.&lt;/p&gt;&lt;p&gt;Допомогла розібратися з Airtable, пошерила всі необхідні посилання, налагодила комунікацію новачка з CM командою. Підтримувала по всіх питаннях протягом адаптації.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Менторство&lt;/span&gt;&lt;span class="tag"&gt;Власна ініціатива&lt;/span&gt;&lt;span class="tag"&gt;Підтримка команди&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="initiative init-pink"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-header"&gt;&lt;div&gt;&lt;div class="init-title"&gt;Овнер воронки BURN · з 25.05.2025&lt;/div&gt;&lt;div class="init-tool"&gt;Інструменти: Tableau, Airtable · Роль: планування + розподіл задач&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="init-body"&gt;&lt;p&gt;З 25 травня — овнер воронки BURN. Налагодила комунікацію з овнером CM воронки, приєдналася до планінгів з розподілу задач між дизайнерами.&lt;/p&gt;&lt;p&gt;Відповідає за: моніторинг навантаження у Tableau, розподіл задач відповідно до грейду та капасіті, комунікацію для виявлення болей на воронці.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tags"&gt;&lt;span class="tag"&gt;Овнерство&lt;/span&gt;&lt;span class="tag"&gt;Аналітика Tableau&lt;/span&gt;&lt;span class="tag"&gt;Розподіл ресурсів&lt;/span&gt;&lt;span class="tag"&gt;Комунікація з командою&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-label"&gt;Визнання від тімліда&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ace-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ace-icon"&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/&gt;&lt;/svg&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ace-coins"&gt;10 ACE coins · Цінності: Entrepreneurship + Collaboration&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ace-quote"&gt;"5 за борду з Figmою з промтами, які допомагають нам генерувати креативи набагато якісніше + розподіл по сетінгам дуже нам допомагає в роботі! І 5 за вирішення проблеми з голосом у креативі. Робиш все щоб поліпшити наші процеси та прибрати болі!"&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="ace-meta"&gt;Від: Vladyslav Cheres · На 1:1: "по роботі нема жодних питань — чітке KPI + ініціативи"&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="section-label"&gt;Чому Junior → Mid вже зараз&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="why-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="why-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-card-title"&gt;&lt;div class="dot" style="background: var(--teal)"&gt;&lt;/div&gt;Вже роблю на рівні Mid&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Самостійно досліджую нові AI-інструменти і перетворюю знахідки на системні рішення для команди&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Будую масштабовані інфраструктури знань: борди, промт-бази, гайди, туторіали&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Беру ініціативу без окремих вказівок: Buddy-роль, Lo-fi дослідження, Loom туторіали&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Овнерство воронки BURN: планування, аналітика, управління навантаженням&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Стабільне KPI (5–6 відео/день) паралельно з великими дослідницькими ініціативами&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="why-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-card-title"&gt;&lt;div class="dot" style="background: #6B5CE7"&gt;&lt;/div&gt;Фокус на наступний рівень&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Поглибити аналітику воронки BURN: від спостереження до системних висновків і рекомендацій&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Документувати AI-дослідження у вигляді кейсів із вимірюваними метриками ефективності&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="why-item"&gt;Розвивати менторство як регулярну практику, не лише при онбординзі нових людей&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer"&gt;Halyna Zakharenko · Creative Marketing Designer · 2025&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<div class="page">
+  <div class="hero">
+    <div class="hero-tag">Growth Plan · 2025</div>
+    <h1 class="hero-name">Halyna<br><span>Zakharenko</span></h1>
+    <p class="hero-role">Creative Marketing Designer · 6 місяців 19 днів</p>
+    <div class="hero-arrow">Junior → Mid <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+  </div>
+  <div class="metrics">
+    <div class="metric"><div class="metric-val">5–6</div><div class="metric-label">відео щодня</div></div>
+    <div class="metric"><div class="metric-val">6+</div><div class="metric-label">промт-систем створено</div></div>
+    <div class="metric"><div class="metric-val">2</div><div class="metric-label">борди у Figma</div></div>
+    <div class="metric"><div class="metric-val">2+</div><div class="metric-label">команди охоплено</div></div>
+    <div class="metric"><div class="metric-val">10</div><div class="metric-label">ACE coins отримано</div></div>
+  </div>
+  <div class="section">
+    <p class="section-label">Ініціативи та вплив — детально</p>
+    <div class="initiative init-teal">
+      <div class="init-header"><div><div class="init-title">Veo3 · Усунення небажаних звуків при генерації</div><div class="init-tool">Інструмент: Veo3 · Платформа: Figma</div></div></div>
+      <div class="init-body"><p>Під час роботи з генерацією відео виявила системну проблему: модель Veo3 додавала небажані смішки та угукання до AI UGC персонажів, що знижувало якість фінального контенту. Самостійно розробила промт, який усунув цей баг на рівні генерації.</p><p>Не зупинилася на особистому рішенні — масштабувала результат: створила борду у Figma з розгалуженою системою промтів. Борда покрила різні сетінги: конференції, подкасти, лекції, діалоги двох людей у кадрі, питання з залу. Всі промти у загальному доступі для команди моушен-дизайнерів.</p></div>
+      <div class="tags"><span class="tag">Самостійне дослідження</span><span class="tag">Масштабування рішення</span><span class="tag">База знань команди</span></div>
+    </div>
+    <div class="initiative init-purple">
+      <div class="init-header"><div><div class="init-title">Veo3 · Консистентний голос персонажів впродовж відео</div><div class="init-tool">Інструмент: Veo3 · Дослідження: PQ Score Improvement</div></div></div>
+      <div class="init-body"><p>Після аналізу дослідження PQ Score Improvement виникла нова задача: AI UGC персонажі втрачали консистентність голосу між сценами. Провела глибоке дослідження метрик, тестувала на реальних персонажах — вивела ідеальну формулу промта.</p><p>Об'єднала новий промт із промтом для прибирання смішків → отримала єдиний універсальний промт для консистентних сцен із якісним звуком і стабільним голосом персонажа.</p></div>
+      <div class="tags"><span class="tag">Аналіз метрик</span><span class="tag">Тестування гіпотез</span><span class="tag">Інтеграція рішень</span></div>
+    </div>
+    <div class="initiative init-coral">
+      <div class="init-header"><div><div class="init-title">Kling 3 · Онбординг нового інструменту для всієї команди</div><div class="init-tool">Інструмент: Kling 3 · Формат: Figma борда + Loom туторіал</div></div></div>
+      <div class="init-body"><p>Адаптувала існуючі промти під специфіку моделі, провела власне дослідження сильних і слабких сторін генерації (наприклад, Kling погано відтворює інтерфейс Facetime). Розмістила всі промти у загальний доступ на борду у Figma.</p><p>Додатково: розробила міні-гайд по роботі з Kling елементами та мультішотом. Записала Loom-туторіал для CM і нових дизайнерів: як через ChatGPT створювати нові промти на базі існуючих.</p></div>
+      <div class="tags"><span class="tag">Дослідження нових інструментів</span><span class="tag">Документація</span><span class="tag">Навчання команди</span></div>
+    </div>
+    <div class="initiative init-amber">
+      <div class="init-header"><div><div class="init-title">Kling 3 + ChatGPT · Lo-fi хук та реалістичні lo-fi відео</div><div class="init-tool">Інструменти: Kling 3, ChatGPT · Якість: 144p equivalent</div></div></div>
+      <div class="init-body"><p>Провела дослідження та тестування в Kling 3 з ціллю симулювати "144p equivalent" якість відео для Lo-fi хуку. Знайшла робочий підхід і додала промти до Figma.</p><p>Виявила комбо: фото поганої якості з GPT + Lo-fi промт у Kling → реалістичні lo-fi відео. Багато дизайнерів одразу почали використовувати і створювали влучні кадри.</p></div>
+      <div class="tags"><span class="tag">Крос-інструментна інтеграція</span><span class="tag">Ітеративне тестування</span><span class="tag">Практичний результат</span></div>
+    </div>
+    <div class="initiative init-blue">
+      <div class="init-header"><div><div class="init-title">Онбординг нового члена команди · Buddy-роль</div><div class="init-tool">Роль: Buddy · Охоплення: процеси, інструменти, комунікація</div></div></div>
+      <div class="init-body"><p>За власною ініціативою взяла роль Buddy для нового дизайнера. Провела повноцінний онбординг: промти, генерація, робочі методи та лайфхаки, CREO BUILDER.</p><p>Допомогла розібратися з Airtable, пошерила всі необхідні посилання, налагодила комунікацію новачка з CM командою. Підтримувала по всіх питаннях протягом адаптації.</p></div>
+      <div class="tags"><span class="tag">Менторство</span><span class="tag">Власна ініціатива</span><span class="tag">Підтримка команди</span></div>
+    </div>
+    <div class="initiative init-pink">
+      <div class="init-header"><div><div class="init-title">Овнер воронки BURN · з 25.05.2025</div><div class="init-tool">Інструменти: Tableau, Airtable · Роль: планування + розподіл задач</div></div></div>
+      <div class="init-body"><p>З 25 травня — овнер воронки BURN. Налагодила комунікацію з овнером CM воронки, приєдналася до планінгів з розподілу задач між дизайнерами.</p><p>Відповідає за: моніторинг навантаження у Tableau, розподіл задач відповідно до грейду та капасіті, комунікацію для виявлення болей на воронці.</p></div>
+      <div class="tags"><span class="tag">Овнерство</span><span class="tag">Аналітика Tableau</span><span class="tag">Розподіл ресурсів</span><span class="tag">Комунікація з командою</span></div>
+    </div>
+  </div>
+  <div class="section">
+    <p class="section-label">Визнання від тімліда</p>
+    <div class="ace-box">
+      <div class="ace-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
+      <div class="ace-coins">10 ACE coins · Цінності: Entrepreneurship + Collaboration</div>
+      <div class="ace-quote">"5 за борду з Figmою з промтами, які допомагають нам генерувати креативи набагато якісніше + розподіл по сетінгам дуже нам допомагає в роботі! І 5 за вирішення проблеми з голосом у креативі. Робиш все щоб поліпшити наші процеси та прибрати болі!"</div>
+      <div class="ace-meta">Від: Vladyslav Cheres · На 1:1: "по роботі нема жодних питань — чітке KPI + ініціативи"</div>
+    </div>
+  </div>
+  <div class="section">
+    <p class="section-label">Чому Junior → Mid вже зараз</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-title"><div class="dot" style="background: var(--teal)"></div>Вже роблю на рівні Mid</div>
+        <div class="why-item">Самостійно досліджую нові AI-інструменти і перетворюю знахідки на системні рішення для команди</div>
+        <div class="why-item">Будую масштабовані інфраструктури знань: борди, промт-бази, гайди, туторіали</div>
+        <div class="why-item">Беру ініціативу без окремих вказівок: Buddy-роль, Lo-fi дослідження, Loom туторіали</div>
+        <div class="why-item">Овнерство воронки BURN: планування, аналітика, управління навантаженням</div>
+        <div class="why-item">Стабільне KPI (5–6 відео/день) паралельно з великими дослідницькими ініціативами</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-title"><div class="dot" style="background: #6B5CE7"></div>Фокус на наступний рівень</div>
+        <div class="why-item">Поглибити аналітику воронки BURN: від спостереження до системних висновків і рекомендацій</div>
+        <div class="why-item">Документувати AI-дослідження у вигляді кейсів із вимірюваними метриками ефективності</div>
+        <div class="why-item">Розвивати менторство як регулярну практику, не лише при онбординзі нових людей</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Halyna Zakharenko · Creative Marketing Designer · 2025</div>
+</div>
 </body>
 </html>
