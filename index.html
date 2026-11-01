@@ -3,213 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Growth Plan · Halyna Zakharenko</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Growth Plan · червень 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #F7F5F0; --surface: #FFFFFF; --surface2: #F0EDE6;
-    --accent: #1A1A1A; --accent2: #6B5CE7; --teal: #00897B;
-    --coral: #E64A35; --amber: #D4860A; --blue: #1565C0; --pink: #C2185B;
-    --green: #2E7D32;
-    --text-primary: #1A1A1A; --text-secondary: #5A5A5A; --text-muted: #9A9A9A;
-    --border: rgba(26,26,26,0.1); --border-strong: rgba(26,26,26,0.2);
-    --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
-    --radius: 16px; --radius-sm: 8px;
-  }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text-primary); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; }
-  .page { max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }
-  .hero { margin-bottom: 64px; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); background: rgba(107,92,231,0.08); border: 1px solid rgba(107,92,231,0.2); padding: 5px 14px; border-radius: 40px; margin-bottom: 20px; }
-  .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
-  .hero-name { font-family: var(--font-display); font-size: clamp(40px, 8vw, 72px); font-weight: 800; line-height: 1.0; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 8px; }
-  .hero-name span { color: var(--accent2); }
-  .hero-role { font-size: 16px; color: var(--text-secondary); margin-bottom: 28px; font-weight: 300; }
-  .hero-arrow { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 10px 20px; border-radius: 40px; }
-  .hero-arrow svg { width: 16px; height: 16px; }
-  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 64px; }
-  @media (max-width: 600px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
-  .metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 14px; text-align: center; }
-  .metric-val { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 6px; }
-  .metric-label { font-size: 11px; color: var(--text-muted); line-height: 1.3; }
-  .section { margin-bottom: 56px; }
-  .section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .initiative { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 12px; position: relative; overflow: hidden; }
-  .initiative::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; border-radius: 4px 0 0 4px; }
-  .init-green::before { background: var(--green); }
-  .init-teal::before { background: var(--teal); }
-  .init-purple::before { background: var(--accent2); }
-  .init-coral::before { background: var(--coral); }
-  .init-amber::before { background: var(--amber); }
-  .init-blue::before { background: var(--blue); }
-  .init-pink::before { background: var(--pink); }
-  .init-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
-  .init-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
-  .init-tool { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 300; }
-  .init-body { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
-  .init-body p + p { margin-top: 10px; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 11px; font-weight: 500; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--border-strong); color: var(--text-secondary); background: var(--bg); }
-  .ace-box { background: #F0FAF6; border: 1px solid rgba(0,137,123,0.25); border-radius: var(--radius); padding: 28px; }
-  .ace-icon { width: 40px; height: 40px; background: var(--teal); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-  .ace-icon svg { width: 22px; height: 22px; fill: #fff; }
-  .ace-coins { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 0.04em; margin-bottom: 10px; }
-  .ace-quote { font-size: 15px; color: var(--text-primary); line-height: 1.8; font-style: italic; margin-bottom: 14px; border-left: 3px solid var(--teal); padding-left: 16px; }
-  .ace-meta { font-size: 12px; color: var(--text-muted); }
-  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
-  .why-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
-  .why-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-  .why-card-title .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .why-item { font-size: 13px; color: var(--text-secondary); line-height: 1.65; padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
-  .why-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .why-item::before { content: '—'; color: var(--text-muted); flex-shrink: 0; margin-top: 1px; }
-  .footer { margin-top: 64px; text-align: center; font-size: 12px; color: var(--text-muted); font-weight: 300; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .hero { animation: fadeUp 0.6s ease both; }
-  .metrics { animation: fadeUp 0.6s 0.1s ease both; }
-  .section:nth-child(3) { animation: fadeUp 0.6s 0.15s ease both; }
-  .section:nth-child(4) { animation: fadeUp 0.6s 0.2s ease both; }
-  .section:nth-child(5) { animation: fadeUp 0.6s 0.25s ease both; }
-  .section:nth-child(6) { animation: fadeUp 0.6s 0.3s ease both; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/plan.css">
 </head>
 <body>
-<div class="page">
-  <div class="hero">
-    <div class="hero-tag">Growth Plan · 2026</div>
-    <h1 class="hero-name">Halyna<br><span>Zakharenko</span></h1>
-    <p class="hero-role"> Marketing Motion Designer · 6 місяців 29 днів</p>
-    <div class="hero-arrow">Junior → Mid <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Growth Plans · Halyna Zakharenko</div>
+    <nav class="switch" aria-label="Growth plans">
+      <a href="2026-11/">Листопад 2026</a>
+      <a href="./" aria-current="page">Червень 2026</a>
+    </nav>
   </div>
+</header>
+
+<main class="page">
+  <div class="hero">
+    <div class="hero-tag">Growth Plan · червень 2026</div>
+    <h1 class="hero-name">Halyna<br><span>Zakharenko</span></h1>
+    <p class="hero-role">Marketing Motion Designer</p>
+    <div class="hero-row">
+      <span class="hero-goal">Junior → Mid <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      <span class="chip">У ролі: 6 місяців 29 днів</span>
+    </div>
+  </div>
+
+  <p class="summary">
+    У перші місяці в ролі я <strong>закрила кілька системних проблем команди</strong> з AI-генерацією відео і зібрала базу промтів і гайдів, якою користуються дизайнери. Паралельно тримала KPI <strong>5–6 відео на день</strong>, а з 25 травня почала вести воронку BURN.
+  </p>
 
   <div class="metrics">
     <div class="metric"><div class="metric-val">5–6</div><div class="metric-label">відео щодня</div></div>
     <div class="metric"><div class="metric-val">7+</div><div class="metric-label">промт-систем створено</div></div>
-    <div class="metric"><div class="metric-val">1</div><div class="metric-label">борди у Figma</div></div>
+    <div class="metric"><div class="metric-val">1</div><div class="metric-label">борда у Figma для команди</div></div>
     <div class="metric"><div class="metric-val">12</div><div class="metric-label">ACE coins отримано</div></div>
   </div>
 
-  <div class="section">
-    <p class="section-label">Ініціативи та вплив — детально</p>
+  <nav class="toc" aria-label="Розділи">
+    <a href="#initiatives">Ініціативи</a>
+    <a href="#recognition">Визнання</a>
+    <a href="#why">Чому Mid</a>
+    <a href="#focus">Фокус</a>
+  </nav>
 
-    <div class="initiative init-green">
-      <div class="init-header"><div><div class="init-title">Creo Builder · Фокус-група тестування першої версії</div><div class="init-tool">Роль: Тестувальник · Формат: баг-репорти + прототипи у Figma</div></div></div>
-      <div class="init-body">
-        <p>Увійшла до фокус-групи тестування першої версії Creo Builder — основного робочого інструменту команди. Активно шукала баги, тестувала функціонал і надавала структурований фідбек безпосередньо розробникам.</p>
-        <p>Паралельно створювала невеликі прототипи у Figma як конкретні пропозиції покращення інструменту. Запропонувала ідею розділення скрипта в конфігу — ідея була прийнята командою розробки і реалізована.</p>
+  <section class="section" id="initiatives">
+    <h2 class="section-label">Ініціативи та вплив</h2>
+
+    <article class="card c-green">
+      <h3 class="card-title">Creo Builder · фокус-група тестування першої версії</h3>
+      <p class="card-meta">Роль: тестувальник · Формат: баг-репорти + прототипи у Figma</p>
+      <div class="card-body">
+        <p>Увійшла до фокус-групи тестування першої версії Creo Builder, основного робочого інструменту команди. Активно шукала баги, тестувала функціонал і давала структурований фідбек розробникам.</p>
+        <p>Паралельно робила невеликі прототипи у Figma як конкретні пропозиції покращень. Запропонувала ідею розділення скрипта в конфігу, і команда розробки її реалізувала.</p>
       </div>
       <div class="tags"><span class="tag">Тестування продукту</span><span class="tag">Фідбек розробникам</span><span class="tag">Прототипування у Figma</span><span class="tag">Продуктове мислення</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-teal">
-      <div class="init-header"><div><div class="init-title">Veo3 · Усунення небажаних звуків при генерації</div><div class="init-tool">Інструмент: Veo3 · Платформа: Figma</div></div></div>
-      <div class="init-body">
-        <p>Під час роботи з генерацією відео виявила системну проблему: модель Veo3 додавала небажані смішки та угукання до AI UGC персонажів, що знижувало якість фінального контенту. Самостійно розробила промт, який усунув цей баг на рівні генерації.</p>
-        <p>Не зупинилася на особистому рішенні — масштабувала результат: створила борду у Figma з розгалуженою системою промтів. Борда покрила різні сетінги: конференції, подкасти, лекції, діалоги двох людей у кадрі, питання з залу. Всі промти у загальному доступі для команди моушен-дизайнерів.</p>
+    <article class="card c-teal">
+      <h3 class="card-title">Veo3 · прибрала небажані звуки при генерації</h3>
+      <p class="card-meta">Інструмент: Veo3 · Платформа: Figma</p>
+      <div class="card-body">
+        <p>Veo3 додавала до AI UGC-персонажів смішки й угукання, і це псувало фінальний контент. Я сама розробила промт, який прибрав цю проблему на рівні генерації.</p>
+        <p>Рішення масштабувала на команду: зібрала борду у Figma з промтами для різних сетінгів — конференції, подкасти, лекції, діалоги двох людей у кадрі, питання з залу. Усі промти у спільному доступі для моушен-дизайнерів.</p>
       </div>
       <div class="tags"><span class="tag">Самостійне дослідження</span><span class="tag">Масштабування рішення</span><span class="tag">База знань команди</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-purple">
-      <div class="init-header"><div><div class="init-title">Veo3 · Консистентний голос персонажів впродовж відео</div><div class="init-tool">Інструмент: Veo3 · Дослідження: PQ Score Improvement</div></div></div>
-      <div class="init-body">
-        <p>Після аналізу дослідження PQ Score Improvement виникла нова задача: AI UGC персонажі втрачали консистентність голосу між сценами. Провела глибоке дослідження метрик, тестувала на реальних персонажах — вивела ідеальну формулу промта.</p>
-        <p>Об'єднала новий промт із промтом для прибирання смішків → отримала єдиний універсальний промт для консистентних сцен із якісним звуком і стабільним голосом персонажа.</p>
+    <article class="card c-purple">
+      <h3 class="card-title">Veo3 · консистентний голос персонажів</h3>
+      <p class="card-meta">Інструмент: Veo3 · Дослідження: PQ Score Improvement</p>
+      <div class="card-body">
+        <p>Після аналізу дослідження PQ Score Improvement з'явилася нова задача: AI UGC-персонажі втрачали стабільність голосу між сценами. Я розібралась, які метрики на це впливають, протестувала на наших персонажах і вивела робочий промт.</p>
+        <p>Об'єднала його з промтом для чистого звуку в один універсальний промт для консистентних сцен: якісний звук і стабільний голос персонажа.</p>
       </div>
       <div class="tags"><span class="tag">Аналіз метрик</span><span class="tag">Тестування гіпотез</span><span class="tag">Інтеграція рішень</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-coral">
-      <div class="init-header"><div><div class="init-title">Kling 3 · Онбординг нового інструменту для всієї команди</div><div class="init-tool">Інструмент: Kling 3 · Формат: Figma борда + Loom туторіал</div></div></div>
-      <div class="init-body">
-        <p>Адаптувала існуючі промти під специфіку моделі, провела власне дослідження сильних і слабких сторін генерації (наприклад, Kling погано відтворює інтерфейс Facetime). Розмістила всі промти у загальний доступ на борду у Figma.</p>
-        <p>Додатково: розробила міні-гайд по роботі з Kling елементами та мультішотом. Записала Loom-туторіал для CM і нових дизайнерів: як через ChatGPT створювати нові промти на базі існуючих.</p>
+    <article class="card c-coral">
+      <h3 class="card-title">Kling 3 · онбординг нового інструменту для команди</h3>
+      <p class="card-meta">Інструмент: Kling 3 · Формат: борда у Figma + Loom-туторіал</p>
+      <div class="card-body">
+        <p>Адаптувала наявні промти під модель і дослідила її сильні й слабкі сторони (наприклад, Kling погано відтворює інтерфейс Facetime). Усі промти виклала на борду у Figma.</p>
+        <p>Зробила міні-гайд по роботі з Kling-елементами й мультішотом. Записала Loom-туторіал для CM і нових дизайнерів: як через ChatGPT створювати нові промти на основі наявних.</p>
       </div>
-      <div class="tags"><span class="tag">Дослідження нових інструментів</span><span class="tag">Документація</span><span class="tag">Навчання команди</span></div>
-    </div>
+      <div class="tags"><span class="tag">Дослідження інструментів</span><span class="tag">Документація</span><span class="tag">Навчання команди</span></div>
+    </article>
 
-    <div class="initiative init-coral">
-      <div class="init-header"><div><div class="init-title">Kling 3 · Фокус-група тестування + ідея спліт-екрану</div><div class="init-tool">Формат: брейншторм · Разом з: Yurii Turchyn</div></div></div>
-      <div class="init-body">
-        <p>Увійшла до фокус-групи тестування Kling 3 одразу після його релізу — разом з Yurii Turchyn. Провели брейншторм нових форматів відео, де запропонувала ідею спліт-екрану: блогер оглядає шоу у форматі реакції — екран розділений між контентом і ведучим.</p>
-        <p>В рамках сесії затестили мультішот — функцію послідовного монтажу сцен всередині одного відео. Результати тестування і знахідки лягли в основу подальших промтів і гайдів для команди.</p>
+    <article class="card c-coral">
+      <h3 class="card-title">Kling 3 · фокус-група та ідея спліт-екрану</h3>
+      <p class="card-meta">Формат: брейншторм · Разом з: Yurii Turchyn</p>
+      <div class="card-body">
+        <p>Увійшла до фокус-групи тестування Kling 3 одразу після релізу. На брейнштормі нових форматів запропонувала спліт-екран: блогер реагує на шоу, екран поділений між контентом і ведучим.</p>
+        <p>У межах сесії ми протестували мультішот. Знахідки лягли в основу подальших промтів і гайдів для команди.</p>
       </div>
       <div class="tags"><span class="tag">Фокус-група</span><span class="tag">Генерація ідей</span><span class="tag">Тестування мультішоту</span><span class="tag">Крос-колаборація</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-amber">
-      <div class="init-header"><div><div class="init-title">Kling 3 + ChatGPT · Lo-fi хук та реалістичні lo-fi відео</div><div class="init-tool">Інструменти: Kling 3, ChatGPT · Якість: 144p equivalent</div></div></div>
-      <div class="init-body">
-        <p>Провела дослідження та тестування в Kling 3 з ціллю симулювати "144p equivalent" якість відео для Lo-fi хуку. Знайшла робочий підхід і додала промти до Figma.</p>
-        <p>Виявила комбо: фото поганої якості з GPT + Lo-fi промт у Kling → реалістичні lo-fi відео. Багато дизайнерів одразу почали використовувати і створювали влучні кадри.</p>
+    <article class="card c-amber">
+      <h3 class="card-title">Kling 3 + ChatGPT · lo-fi хуки</h3>
+      <p class="card-meta">Інструменти: Kling 3, ChatGPT · Якість: 144p equivalent</p>
+      <div class="card-body">
+        <p>Дослідила й протестувала в Kling 3, як отримати якість «144p equivalent» для lo-fi хуку. Знайшла робочий підхід і додала промти у Figma.</p>
+        <p>Знайшла комбо: фото поганої якості з ChatGPT + lo-fi промт у Kling дають реалістичні lo-fi відео. Багато дизайнерів одразу почали цим користуватись.</p>
       </div>
       <div class="tags"><span class="tag">Крос-інструментна інтеграція</span><span class="tag">Ітеративне тестування</span><span class="tag">Практичний результат</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-blue">
-      <div class="init-header"><div><div class="init-title">Онбординг нового члена команди · Buddy-роль</div><div class="init-tool">Роль: Buddy · Охоплення: процеси, інструменти, комунікація</div></div></div>
-      <div class="init-body">
-        <p>За власною ініціативою взяла роль Buddy для нового дизайнера. Провела повноцінний онбординг: промти, генерація, робочі методи та лайфхаки, CREO BUILDER.</p>
-        <p>Допомогла розібратися з Airtable, пошерила всі необхідні посилання, налагодила комунікацію новачка з CM командою. Підтримувала по всіх питаннях протягом адаптації.</p>
+    <article class="card c-blue">
+      <h3 class="card-title">Buddy для нового колеги</h3>
+      <p class="card-meta">Роль: Buddy · Охоплення: процеси, інструменти, комунікація</p>
+      <div class="card-body">
+        <p>З власної ініціативи взяла роль Buddy для нового дизайнера. Провела онбординг: промти, генерація, робочі методи й лайфхаки, Creo Builder.</p>
+        <p>Допомогла з Airtable, поділилась потрібними посиланнями, налагодила комунікацію новачка з CM і підтримувала з усіх питань під час адаптації.</p>
       </div>
       <div class="tags"><span class="tag">Менторство</span><span class="tag">Власна ініціатива</span><span class="tag">Підтримка команди</span></div>
-    </div>
+    </article>
 
-    <div class="initiative init-pink">
-      <div class="init-header"><div><div class="init-title">Овнер воронки BURN · з 25.05.2026</div><div class="init-tool">Інструменти: Tableau, Airtable · Роль: планування + розподіл задач</div></div></div>
-      <div class="init-body">
-        <p>З 25 травня — овнер воронки BURN. Налагодила комунікацію з овнером CM воронки, приєдналася до планінгів з розподілу задач між дизайнерами.</p>
-        <p>Відповідає за: моніторинг навантаження дизайнерів, аналіз статистики у Tableau, розподіл задач відповідно до грейду та капасіті, комунікацію з овнером CM та дизайнерами для виявлення болей на воронці.</p>
+    <article class="card c-pink">
+      <h3 class="card-title">Старт овнерства воронки BURN</h3>
+      <p class="card-meta">З 25.05.2026 · Tableau, Airtable · Роль: планування + розподіл задач</p>
+      <div class="card-body">
+        <p>З 25 травня я овнер воронки BURN. Налагодила комунікацію з овнером CM-воронки й долучилась до планінгів, де задачі розподіляють між дизайнерами.</p>
+        <p>Відповідаю за моніторинг навантаження дизайнерів, аналіз статистики в Tableau, розподіл задач за грейдом і капасіті та розмови з дизайнерами про болі на воронці.</p>
       </div>
       <div class="tags"><span class="tag">Овнерство</span><span class="tag">Аналітика Tableau</span><span class="tag">Розподіл ресурсів</span><span class="tag">Комунікація з командою</span></div>
-    </div>
-  </div>
+    </article>
+  </section>
 
-  <div class="section">
-    <p class="section-label">ACE coins</p>
-    <div class="ace-box">
-      <div class="ace-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg></div>
-      <div class="ace-coins">12 ACE coins · Від 3 колег</div>
-      <div class="ace-quote">"5 за борду з Figmою з промтами, які допомагають нам генерувати креативи набагато якісніше + розподіл по сетінгам дуже нам допомагає в роботі! І 5 за вирішення проблеми з голосом у креативі. Робиш все щоб поліпшити наші процеси та прибрати болі!"</div>
-      <div class="ace-meta">Від: Vladyslav Cheres · 10 coins · Entrepreneurship + Collaboration · На 1:1: "по роботі нема жодних питань — чітке KPI + ініціативи"</div>
-      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(0,137,123,0.15);">
-        <div class="ace-quote">"Галя, твоя ініціативність і віддача дуже надихають. Дякую, що ти завжди готова у все вриватися з власними ідеями і баченням"</div>
-        <div class="ace-meta">Від: Yurii Turchyn · 1 coin · Entrepreneurship + Collaboration</div>
+  <section class="section" id="recognition">
+    <h2 class="section-label">Визнання від команди · 12 ACE coins від 3 колег</h2>
+    <div class="quotes">
+      <div class="quote">
+        <p class="quote-text">«5 за борду з Figma з промтами, які допомагають нам генерувати креативи набагато якісніше + розподіл по сетінгам дуже нам допомагає в роботі! І 5 за вирішення проблеми з голосом у креативі. Робиш все щоб поліпшити наші процеси та прибрати болі!»</p>
+        <p class="quote-meta">Vladyslav Cheres · <b>10 coins</b> · Entrepreneurship, Collaboration</p>
       </div>
-      <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(0,137,123,0.15);">
-        <div class="ace-quote">"Дякую Галі за величезну витримку й внесок у заведення довгих креативів, які розривають табло"</div>
-        <div class="ace-meta">Від: Svitlana Derevianko · 1 coin · Collaboration</div>
+      <div class="quote">
+        <p class="quote-text">«Галя, твоя ініціативність і віддача дуже надихають. Дякую, що ти завжди готова у все вриватися з власними ідеями і баченням»</p>
+        <p class="quote-meta">Yurii Turchyn · <b>1 coin</b> · Entrepreneurship, Collaboration</p>
       </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <p class="section-label">Чому Junior → Mid вже зараз</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-card-title"><div class="dot" style="background: var(--teal)"></div>Вже роблю на рівні Mid</div>
-        <div class="why-item">Тестую продукти компанії на рівні фокус-групи: знаходжу баги, пропоную покращення з прототипами</div>
-        <div class="why-item">Самостійно досліджую нові AI-інструменти і перетворюю знахідки на системні рішення для команди</div>
-        <div class="why-item">Будую масштабовані інфраструктури знань: борди, промт-бази, гайди, туторіали</div>
-        <div class="why-item">Беру ініціативу без окремих вказівок: Buddy-роль, овнерство воронки, створення бази промтів, Loom туторіали</div>
-        <div class="why-item">Овнерство воронки BURN: планування, аналітика, комунікація з CM, управління навантаженням</div>
-        <div class="why-item">Стабільне KPI (5–6 відео/день) паралельно з великими дослідницькими ініціативами</div>
+      <div class="quote">
+        <p class="quote-text">«Дякую Галі за величезну витримку й внесок у заведення довгих креативів, які розривають табло»</p>
+        <p class="quote-meta">Svitlana Derevianko · <b>1 coin</b> · Collaboration</p>
       </div>
-      <div class="why-card">
-        <div class="why-card-title"><div class="dot" style="background: #6B5CE7"></div>Фокус на наступний рівень</div>
-        <div class="why-item">Поглибити аналітику воронки BURN: від спостереження до системних висновків і рекомендацій</div>
-        <div class="why-item">Документувати AI-дослідження у вигляді кейсів із вимірюваними метриками ефективності</div>
-        <div class="why-item">Розвивати менторство як регулярну практику, не лише при онбординзі нових людей</div>
+      <div class="quote">
+        <p class="quote-text">«По роботі нема жодних питань: чітке KPI + ініціативи»</p>
+        <p class="quote-meta">Тімлід на 1:1</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="footer">Halyna Zakharenko · Marketing Motion Designer · 2026</div>
-</div>
+  <section class="section" id="why">
+    <h2 class="section-label">Чому Junior → Mid вже зараз</h2>
+    <div class="panel" style="--c: var(--teal)">
+      <h3 class="panel-title">Вже працюю на рівні Mid</h3>
+      <div class="item"><b>Тестую продукти компанії</b> на рівні фокус-групи: знаходжу баги й пропоную покращення з прототипами.</div>
+      <div class="item"><b>Самостійно досліджую AI-інструменти</b> й перетворюю знахідки на системні рішення для команди.</div>
+      <div class="item"><b>Будую бази знань,</b> які лишаються в команді: борди, промт-бази, гайди, туторіали.</div>
+      <div class="item"><b>Беру ініціативу без окремих вказівок:</b> Buddy, овнерство воронки, база промтів, Loom-туторіали.</div>
+      <div class="item"><b>Веду воронку BURN:</b> планування, аналітика, комунікація з CM, управління навантаженням.</div>
+      <div class="item"><b>Стабільно тримаю KPI</b> (5–6 відео на день) паралельно з дослідницькими ініціативами.</div>
+    </div>
+  </section>
+
+  <section class="section" id="focus">
+    <h2 class="section-label">Фокус на наступний рівень</h2>
+    <div class="goal">
+      <div class="goal-num">1</div>
+      <div><h3 class="goal-title">Аналітика воронки BURN</h3><p class="goal-body">Поглибити аналітику: від спостереження до системних висновків і рекомендацій.</p></div>
+    </div>
+    <div class="goal">
+      <div class="goal-num">2</div>
+      <div><h3 class="goal-title">Кейси з метриками</h3><p class="goal-body">Документувати AI-дослідження як кейси з вимірюваними метриками ефективності.</p></div>
+    </div>
+    <div class="goal">
+      <div class="goal-num">3</div>
+      <div><h3 class="goal-title">Регулярне менторство</h3><p class="goal-body">Розвивати менторство як постійну практику, а не лише під час онбордингу нових людей.</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>Halyna Zakharenko · Marketing Motion Designer · червень 2026</span>
+    <a href="2026-11/">Новий план · листопад 2026 →</a>
+  </footer>
+</main>
 </body>
 </html>
