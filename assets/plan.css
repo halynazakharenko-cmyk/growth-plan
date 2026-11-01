@@ -136,6 +136,19 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .summary { animation-delay: .05s; } .metrics { animation-delay: .1s; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero, .summary, .metrics { animation: none; } }
 
+/* Embed mode: inside Notion the page blends into Notion's own background */
+html.in-embed { --bg: #FFFFFF; --surface: #FBFBFA; --surface2: #F1F1EF; --topbar: transparent; }
+@media (prefers-color-scheme: dark) {
+  html.in-embed:not([data-theme="light"]) { --bg: #191919; --surface: #202020; --surface2: #2A2A2A; --topbar: transparent; }
+}
+html.in-embed[data-theme="dark"] { --bg: #191919; --surface: #202020; --surface2: #2A2A2A; --topbar: transparent; }
+html.in-embed, html.in-embed body { background: var(--bg); }
+html.in-embed .topbar { position: static; border-bottom: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+html.in-embed .topbar-inner { padding-top: 8px; padding-bottom: 0; justify-content: flex-start; }
+html.in-embed .brand { display: none; }
+html.in-embed .page { padding-top: 32px; }
+html.in-embed .hero-name { font-size: clamp(36px, 7vw, 60px); }
+
 /* Mobile */
 @media (max-width: 600px) {
   .topbar-inner { padding: 10px 16px; }
